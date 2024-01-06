@@ -81,7 +81,7 @@ export const Ahorcado = () => {
     if (!checked) {
       btnLetter.disabled = true;
       mistakes++;
-      image.src = `public/img${mistakes}.png`;
+      image.src = `/assets/img${mistakes}.png`;
     }
     if (mistakes === 6) {
       result.innerHTML = " You loose! the word was: " + randomWord
@@ -103,7 +103,7 @@ export const Ahorcado = () => {
     }
   };
   const gameOver = () => {
-    image.src = "public/img0.png"
+    image.src = "/assets/img0.png"
     divWord.textContent = "";
     divAlphabet.textContent = "";
     h2Play.textContent = "PLAY AGAIN!";
