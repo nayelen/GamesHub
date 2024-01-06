@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+:root {
+  --color-1: #ffffff;
+  --color-2: #aa5ebf;
+  --color-3: #2b2828; 
+  --color-4: #87f4f6;
+
+ /* SPACINGS */
+ --margin-xs: 10px;
+ --margin-s: 20px;
+ --margin-m: 30px;
+ --margin-l: 40px;
+ --margin-xl: 50px;
+ --margin-section: 100px;
+
+ --padding-xxs: 5px;
+ --padding-xs: 10px;
+ --padding-s: 20px;
+ --padding-m: 30px;
+ --padding-l: 40px;
+ --padding-xl: 50px;
+
+ --gap-xs: 10px;
+ --gap-s: 20px;
+ --gap-m: 30px;
+ --gap-l: 40px;
+ --gap-xl: 50px;
+
+ /* BORDER RADIUS */
+ --primary-br: 10px;
+ --secondary-br: 20px;
+
+ /* FONTS */
+ --font-size-pri: 5rem;
+ --font-size-sec: 2.5rem;
+ --font-size-ter: 1.6rem;
+ --font-size-four: 1rem;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'VT323', monospace;
+}
+body {
+  background-color: var(--color-3);
+  color: var(--color-1);
+  width: 100%;
+}
+.content {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: var(--gap-m);
+margin-top: var(--margin-section);
+min-height:80vh ;
+width: 100%;
+}
+

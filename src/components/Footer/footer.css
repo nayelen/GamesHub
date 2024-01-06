@@ -1,0 +1,19 @@
+footer {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: var(--margin-xl);
+  
+}
+footer > p {
+font-size: var(--font-size-ter);
+}
+footer > a {
+  width: 50px;
+  cursor: pointer;
+}
+footer > a > img {
+  width: 100%;
+}
