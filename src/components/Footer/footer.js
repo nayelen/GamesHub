@@ -7,7 +7,7 @@ export const Footer = (divApp) => {
   const link = document.createElement('a');
 
   p.textContent = ' Created by Nadia Pérez with 💜 © 2024'
-  img.src = 'assets/github.png';
+  img.src = 'public/github.png';
   link.href = "https://github.com/nayelen";
 
   divApp.appendChild(footer);
