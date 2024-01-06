@@ -15,7 +15,8 @@ export const initBoard = () => {
   const turnBox1 = document.createElement("p");
   const turnBox2 = document.createElement("p");
   const divBg = document.createElement("div");
-  turn.textContent = "Turn For";
+  turn.innerHTML = "Choose player";
+  turn.className = "turn"
   turnBox1.className = "turnBox1";
   turnBox1.textContent = "X";
   turnBox2.className = "turnBox2";

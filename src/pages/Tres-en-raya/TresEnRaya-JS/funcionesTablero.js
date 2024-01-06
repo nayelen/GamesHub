@@ -1,4 +1,4 @@
-let turn = "X";
+let turn = "";
 let isGameOver = false;
 
 export const boardFunctions = () => {
@@ -19,15 +19,33 @@ export const boardFunctions = () => {
     if (turn === "X") {
       turn = "O";
       document.querySelector(".bg").style.left = "85px";
+      document.querySelector(".turn").innerHTML = "Turn for: "
     } else {
       turn = "X";
       document.querySelector(".bg").style.left = "0px";
+      document.querySelector(".turn").innerHTML = "Turn for: "
     }
   };
-  const box1 = document.querySelector('.turnBox1')
-  box1.addEventListener("click", changeTurn);
-  const box2 = document.querySelector('.turnBox2')
-  box2.addEventListener("click", changeTurn);
+  let box1 = document.querySelector('.turnBox1')
+  let box2 = document.querySelector('.turnBox2')
+
+  const select = (e) => {
+    let boxSelect = e.target;
+    if (boxSelect === box1) {
+      turn = "X";
+      document.querySelector(".bg").style.left = "0px";
+      box1.removeEventListener("click", select)
+      box2.removeEventListener("click", select)
+    }
+    if (boxSelect === box2) {
+      turn = "O";
+      document.querySelector(".bg").style.left = "85px";
+      box2.removeEventListener("click", select)
+      box1.removeEventListener("click", select)
+    }
+  };
+  box1.addEventListener("click", select);
+  box2.addEventListener("click", select);
 
   const checkWin = () => {
     const winConditions = [
@@ -68,9 +86,12 @@ export const boardFunctions = () => {
   const btnRestart = document.querySelector(".restartBtn")
   const restart = () => {
     isGameOver = false;
-    turn = "X";
-    document.querySelector(".bg").style.left = "0";
+    turn = "";
+    document.querySelector(".bg").style.left = "";
     document.querySelector(".results").innerHTML = "";
+    document.querySelector(".turn").innerHTML = "Choose player"
+    box1.addEventListener("click", select);
+    box2.addEventListener("click", select);
 
     boxes.forEach(e => {
       e.innerHTML = "";
