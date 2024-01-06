@@ -41,7 +41,7 @@ export const Ahorcado = () => {
 
   const start = () => {
     randomWord = getRandomWord();
-    image.src = "./src/pages/Ahorcado/assets/img0.png";
+    image.src = "/assets/img0.png";
     result.innerHTML = "";
     h2Play.innerHTML = "";
     mistakes = 0;
@@ -103,7 +103,7 @@ export const Ahorcado = () => {
     }
   };
   const gameOver = () => {
-    image.src = "/assets/img0.png"
+    image.src = "/assets/img0.png";
     divWord.textContent = "";
     divAlphabet.textContent = "";
     h2Play.textContent = "PLAY AGAIN!";

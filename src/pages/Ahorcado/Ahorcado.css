@@ -39,6 +39,7 @@
 #alphabet > button {
   cursor: pointer;
   border-radius: var(--secondary-br);
+  color: var(--color-3);
   background-color: var(--color-2);
   padding: var(--padding-xxs) var(--padding-xs);
   transition: all 0.5s;
