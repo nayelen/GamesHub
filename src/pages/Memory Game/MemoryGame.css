@@ -71,6 +71,7 @@
   background-color: var(--color-2);
   border-radius: var(--primary-br);
   padding: var(--padding-xs);
+  color: var(--color-3);
 }
 @media (max-width: 890px) {
   .boardMemory{
