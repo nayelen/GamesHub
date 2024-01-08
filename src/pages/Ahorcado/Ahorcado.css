@@ -61,8 +61,16 @@
 .final img {
   width: 200px;
 }
-.final h3 {
+.final div {
   font-size: var(--font-size-ter);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xl);
+  justify-content: center;
+  align-items: center;
+}
+.final h3 {
+  font-size: var(--font-size-sec);
 }
 .playAgain {
   font-size: var(--font-size-pri);

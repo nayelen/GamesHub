@@ -24,16 +24,17 @@ export const Ahorcado = () => {
   const image = document.createElement("img");
   image.className = "image";
   const result = document.createElement("h3");
+  const container = document.createElement("div");
+  const wrongLetters = document.createElement("p");
 
   mainContent.appendChild(divWord);
   mainContent.appendChild(h2Play);
   mainContent.appendChild(divAlphabet);
   divFinal.appendChild(image);
-  divFinal.appendChild(result);
+  divFinal.appendChild(container);
+  container.appendChild(wrongLetters);
+  container.appendChild(result);
   mainContent.appendChild(divFinal);
-
-
-
 
   let randomWord = "";
   let mistakes = 0;
@@ -82,6 +83,7 @@ export const Ahorcado = () => {
       btnLetter.disabled = true;
       mistakes++;
       image.src = `/assets/img${mistakes}.png`;
+      wrongLetters.innerHTML += e.target.textContent + ",";
     }
     if (mistakes === 6) {
       result.innerHTML = " You loose! the word was: " + randomWord
@@ -106,6 +108,7 @@ export const Ahorcado = () => {
     image.src = "/assets/img0.png";
     divWord.textContent = "";
     divAlphabet.textContent = "";
+    wrongLetters.textContent = "";
     h2Play.textContent = "PLAY AGAIN!";
   }
 
