@@ -1,13 +1,15 @@
 footer {
-  margin-top: var(--margin-xl);
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: var(--padding-xs);
+  height: 5vh;
+  gap: var(--gap-xs);
 }
 footer > p {
 font-size: var(--font-size-ter);
+text-align: center;
 }
 footer > a {
   width: 50px;
@@ -15,4 +17,16 @@ footer > a {
 }
 footer > a > img {
   width: 100%;
+}
+@media (max-width: 400px) {
+  footer {
+    height: 3vh;
+  }
+  footer > p {
+    font-size: var(--font-size-four);
+  }
+  footer > a {
+    width: 30px;
+  
+  }
 }
