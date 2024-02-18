@@ -9,8 +9,8 @@ export const Header = (divApp) => {
   const button2 = document.createElement('button');
   const button3 = document.createElement('button');
 
-  buttonTer.textContent = "Tres en raya";
-  button2.textContent = "Ahorcado";
+  buttonTer.textContent = "Tic-Tac-Toe";
+  button2.textContent = "Hangman Game";
   button3.textContent = "Memory Game";
 
   buttonTer.addEventListener('click', initTresEnRaya);
